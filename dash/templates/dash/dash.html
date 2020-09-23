@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>CARLA Dashboard</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{% static 'css/dash.css' %}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <p id="speed" class="speed">{{ speed }}</p>
+        <div class="wrapper">
+            <div class="gearbox-div">
+                <p id="P" class="gearbox">P</p>
+                <p id="R" class="gearbox">R</p>
+                <p id="N" class="gearbox">N</p>
+                <p id="D" class="gearbox">D</p>
+            </div>
+            <p class="speed-unit">KPH</p>
+            <p id="time" class="time">{{ time }}</p>
+            
+        </div>
+        <div class="divider"></div>
+        <div class="wrapper">
+            <div class="steering-div">
+                <img id = "steering" class="steering" src="https://cdn.onlinewebfonts.com/svg/img_10415.png">
+            </div>
+        </div>
+        <div class="lane-detection">
+            <img class="user-vehicle" src="{% static 'img/car.jpg' %}" height="400px">
+        </div>
+        <script src="{% static 'js/jquery-3.5.1.min.js' %}"></script>
+        <script src="{% static 'js/dash.js' %}"></script>
+
+    </body>
+</html>
